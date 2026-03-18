@@ -1,4 +1,4 @@
-const BASE_URL = "https://amazon-server-t4kg.onrender.com/";
+const BASE_URL = "https://amazon-server-t4kg.onrender.com";
 // GET navbar menu items
 export const getNavbarLinks = async () => {
     const res = await fetch(`${BASE_URL}/navbarLinks`);
