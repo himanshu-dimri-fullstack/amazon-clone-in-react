@@ -1,7 +1,7 @@
 import logo from "../../assets/amazon_logo.png";
 import india from "../../assets/india.svg";
 import { MapPin, ShoppingCart, User } from "lucide-react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../context/CartContext";
 import { AuthContext } from "../../context/AuthContext";
@@ -12,6 +12,7 @@ const NavbarBelt = () => {
     const { cart } = useContext(CartContext);
     const { user, logout } = useContext(AuthContext);
     const [showDropdown, setShowDropdown] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleClickOutside = () => setShowDropdown(false);
@@ -19,11 +20,15 @@ const NavbarBelt = () => {
         return () => window.removeEventListener("click", handleClickOutside);
     }, []);
 
+    useEffect(() => {
+        setShowDropdown(false);
+    }, [location]);
+
     return (
         <>
             <div className='flex items-center justify-between px-5 lg:px-1 bg-[#131921] h-15 p-1'>
 
-                <Link to={'/'} className='flex px-1 pt-3 border border-transparent hover:border-white'>
+                <Link to={'/'} className='flex px-1 pt-3 border border-transparent hover:border-white focus:outline-none focus:ring-0'>
                     <img src={logo} className='h-8 w-20 sm:h-10 sm:w-25' />
                     <span className='text-white text-sm sm:pt-1'>.in</span>
                 </Link>
@@ -142,7 +147,7 @@ const NavbarBelt = () => {
                         </div>
                     </div>
 
-                    <div className='flex items-center gap-1 px-1 sm:pt-2 border border-transparent hover:border-white'>
+                    <div className='flex items-center gap-1 px-1 sm:pt-2 border border-transparent hover:border-white focus:outline-none focus:ring-0'>
                         <Link to={"/cart"} className="flex items-center">
                             <span className='text-[#f08804] text-sm font-bold'>
                                 {cart.length}
