@@ -70,7 +70,7 @@ const ProductDetail = () => {
                 <div className="flex-1 overflow-hidden group">
                     <img
                         src={mainImg}
-                        className="w-full h-75 md:h-auto object-contain transition-transform duration-300 group-hover:scale-125"
+                        className="w-full h-50 md:h-auto object-contain transition-transform duration-300 group-hover:scale-125"
                     />
                 </div>
             </div>

@@ -38,7 +38,7 @@ const Login = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="max-w-sm mx-auto mt-10">
+        <form onSubmit={handleSubmit} className="max-w-sm mx-auto mt-10 p-3">
             <Input type={"email"} name={"email"} placeholder={"Email"} value={form.email} onChange={handleChange} required={"required"} />
             <Input type={"password"} name={"password"} placeholder={"Password"} value={form.password} onChange={handleChange} required={"required"} />
             {error && <p className="text-red-500 mb-2">{error}</p>}

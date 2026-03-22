@@ -44,7 +44,7 @@ const Signup = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="max-w-sm mx-auto mt-10">
+        <form onSubmit={handleSubmit} className="max-w-sm mx-auto mt-10 p-3">
 
             <Input type={"text"}
                 name={"name"}

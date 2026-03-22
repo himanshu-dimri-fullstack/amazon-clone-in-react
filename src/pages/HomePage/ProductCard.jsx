@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
                 <div className="flex justify-center overflow-hidden">
                     <img
                         src={selectedImage}
-                        className="h-40 sm:h-48 object-contain transition-transform duration-300 hover:scale-110"
+                        className="h-30 sm:h-48 object-contain transition-transform duration-300 hover:scale-110"
                     />
                 </div>
             </Link>
