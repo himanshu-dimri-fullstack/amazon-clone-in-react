@@ -1,7 +1,7 @@
 const BASE_URL = "https://amazon-server-five.vercel.app";
 
 export const getNavbarLinks = async () => {
-    const res = await fetch(`${BASE_URL}/api/navbarLinks`);
+    const res = await fetch(`${BASE_URL}/api/navbar`);
     return res.json();
 };
 
@@ -24,7 +24,7 @@ export const getProducts = async (subcategoryId) => {
 
 export const getMobileProducts = async () => {
     const res = await fetch(
-        `${BASE_URL}/products`
+        `${BASE_URL}/api/products`
     );
     return res.json();
 };
