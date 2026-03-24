@@ -45,8 +45,7 @@ const FullscreenSlider = () => {
                 {slides.map((slide, index) => (
                     <div key={index}>
                         <img
-                            className="mask-[linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0))]
-                            object-cover! object-top!"
+                            className="mask-[linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0))] object-cover"
                             src={slide}
                             alt={`slide-${index + 1}`}
 
